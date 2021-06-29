@@ -1,0 +1,199 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    {%load static%}
+    <link href="{% static 'extension/css/style.css'%}" type="text/css" rel="stylesheet"> 
+    <link href="{%static 'extension/css/bootstrap.min.css'%}" type="text/css" rel="stylesheet"> 
+
+</head>
+<body >
+    {%load static%}
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!-- logo -->
+        <a class="navbar-brand" href="file:///C:/Users/aamac/Documents/PruebaHTML_007/Exp2_Hurtado_Hernandez_Aravena_007D/Productos.html">
+          <img src="{% static 'extension/img/logo.png' %}" width="30" height="30" alt="">
+        </a>
+        
+        <!-- enlaces -->
+        <div class="collapse navbar-collapse btn-group" id="opciones">   
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="file:///C:/Users/aamac/Documents/PruebaHTML_007/Exp2_Hurtado_Hernandez_Aravena_007D/zapatillas.html">Zapatillas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="file:///C:/Users/aamac/Documents/PruebaHTML_007/Exp2_Hurtado_Hernandez_Aravena_007D/Ropa.html">Ropa</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Accesorios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="file:///C:/Users/aamac/Documents/PruebaHTML_007/Exp2_Hurtado_Hernandez_Aravena_007D/Registro.html">Registro</a>
+            </li>    
+            <label for="dark-mode" class="dark-mode-button">
+
+              <input id="dark-mode" type="checkbox" onclick="document.documentElement.classList.toggle('dark-mode')">
+              Modo Oscuro
+              </label>
+          </ul>
+        </div>
+      </nav>
+      <br>
+
+    <div class="row">
+    <div class="col-lg-8 mx-auto">
+      
+        <form class="form-register" action="#" method="post" onsubmit="return validacion();">
+          <h1 class="page-section-heading text-center text-uppercase text-secondary mb-0">Registro Cliente</h1>
+          <br><br>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                <input class="form-control" name="rut"  id="rut" type="text" placeholder="Ingrese su Rut" />
+            </div>
+        </div>
+            <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                    <input class="form-control" name="nombre"  id="nombre" type="text" placeholder="Nombre Completo" />
+                    
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                    <input class="form-control" name="email" id="email" type="text" placeholder="Email"/>
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                    <input class="form-control" name="fono" id="fono" type="number" placeholder="Numero de telefono"   />
+                </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <input class="form-control" name="fechan" id="fechan" type="date" placeholder="Fecha Nacimiento" min="1990-01-01"  />
+              </div>
+          </div>
+            <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                    <input class="form-control" id="contra" id="contra" type="password" placeholder="Contraseña"  />
+                </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <input class="form-control" name="direccion" id="direccion" type="text" placeholder="Direccion" />
+              </div>
+          </div>
+            <br>
+            <button class="btn btn-primary btn-xl btn-enviar" type="submit">Enviar</button>
+        </form>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-center text-white">
+  <div class="container p-4">
+  
+   
+    <section class="mb-4">
+  
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-facebook-f"><img class="icon" src="{% static 'extension/iconos/facebook.png' %}"></i
+      ></a>
+  
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+         ><i class="fab fa-twitter"> <img class="icon" src="{% static 'extension/iconos/gorjeo.png' %}"></i
+      ></a>
+  
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-correo"> <img class="icon" src="{% static 'extension/iconos/correo-electronico.png' %}"></i
+      ></a>
+  
+      <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/mr__cardo/" role="button" target="_blank"
+        ><i class="fab fa-instagram"><img class="icon" src="{% static 'extension/iconos/instagram2.png' %}"></i
+      ></a>
+  
+      <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/samuel-hurtado-9a3b711a0/" role="button" target="_blank"
+        ><i class="fab fa-linkedin-in"><img class="icon" src="{% static 'extension/iconos/linkedin.png' %}"></i
+      ></a>
+  
+      <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/Lsmuel/Exp1_Hurtado_Hernandez_Aravena_007D" role="button" target="_blank"
+        ><i class="fab fa-github"><img class="icon" src="{% static 'extension/iconos/github.png' %}"></i
+      ></a>
+  
+    </section>
+  
+    <section>
+      <form >
+        <div class="row d-flex justify-content-center">
+          <div class="col-auto">
+            <p class="pt-2">
+              <strong>Suscribase mi Rey 😘</strong>
+            </p>
+          </div>
+        
+  
+  
+          <div class="col-md-5 col-12">
+            <div class="form-outline form-white mb-4">
+              <input type="email" id="form5Example2" class="form-control" />
+              <label class="form-label" for="form5Example2">Ingrese su Email</label>
+            </div>
+          </div>
+  
+          <div class="col-auto">
+            <button type="submit" class="btn btn-outline-light mb-4">
+              Subscribirse
+            </button>
+          </div>
+        </div>
+      </form>
+    </section>
+  
+     <a href="file:///C:/Users/aamac/Documents/PruebaHTML_007/Exp2_Hurtado_Hernandez_Aravena_007D/Productos.html"><img src="{% static 'extension/img/LogoNegro.png' %}" class="img-fluid logon center-xs" alt="Responsive image">
+    <a href="https://www.ccs.cl/#" target="_blank"><img class="img-fluid camara" src="{% static 'extension/img/footer-badges.png' %}" alt="Responsive image">
+    </div>
+    <section>
+      <div class="row">
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">INFORMACION</h5>
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="file:///C:/Users/aamac/Documents/PruebaHTML_007/Exp2_Hurtado_Hernandez_Aravena_007D/Inicio.html" class="text-white">Quienes Somos</a>
+            </li>
+            <li>
+            <li>
+              <a href="#!" class="text-white">Privacidad Y Seguridad</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Preguntas Frecuentes</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Nuestras Tiendas</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Terminos Y Condiciones</a>
+            </li>
+          </ul>
+        </div>
+          </ul>
+       
+    </section>
+    
+  
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2021 Copyright: Todos Los derechos reservados
+  </div>
+  
+  </footer>
+
+  <script src="{%static 'extension/js/java.js'%}"></script>
+</body>
+
+</html>
