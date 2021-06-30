@@ -52,43 +52,50 @@
     <div class="col-lg-8 mx-auto">
       
         <form class="form-register" action="#" method="post" onsubmit="return validacion();">
-          <h1 class="page-section-heading text-center text-uppercase text-secondary mb-0">Registro Cliente</h1>
+          <h1 class="page-section-heading text-center text-uppercase text-secondary mb-0">Registro Colaboradores</h1>
           <br><br>
           <div class="control-group">
             <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                <input class="form-control" name="rut"  id="rut" type="text" placeholder="Ingrese su Rut" />
+              {{colab.rut}}
             </div>
-        </div>
-            <div class="control-group">
-                <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                    <input class="form-control" name="nombre"  id="nombre" type="text" placeholder="Nombre Completo" />
-                    
-                </div>
-            </div>
-            <div class="control-group">
-                <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                    <input class="form-control" name="email" id="email" type="text" placeholder="Email"/>
-                </div>
-            </div>
-            <div class="control-group">
-                <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                    <input class="form-control" name="fono" id="fono" type="number" placeholder="Numero de telefono"   />
-                </div>
-            </div>
-            <div class="control-group">
-              <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                  <input class="form-control" name="fechan" id="fechan" type="date" placeholder="Fecha Nacimiento" min="1990-01-01"  />
-              </div>
           </div>
             <div class="control-group">
                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                    <input class="form-control" id="contra" id="contra" type="password" placeholder="Contraseña"  />
+                  {{colab.nombreComp}}
+                    
                 </div>
-            </div>
-            <div class="control-group">
+          </div>
+          <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                  <input class="form-control" name="direccion" id="direccion" type="text" placeholder="Direccion" />
+                {{colab.image}}
+                  
               </div>
+          </div>
+          <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  {{colab.email}}
+                </div>
+          </div>
+          <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  {{colab.telefono}}
+                </div>
+          </div>
+         
+          <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  {{colab.contrasenia}}
+                </div>
+          </div>
+          <div class="control-group">
+              <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  {{colab.direccion}}
+              </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                <input class="form-control" name="pais" id="pais" type="text" placeholder="Pais" />
+            </div>
           </div>
             <br>
             <button class="btn btn-primary btn-xl btn-enviar" type="submit">Enviar</button>
