@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .forms import ColaboradoresForm
+from .models import Colaboradores
 # Create your views here.
 
 def formulario(request):
@@ -14,3 +15,15 @@ def form_colaboradores(request):
     else:
         colab=ColaboradoresForm()
     return render(request, 'anubis/formulario.html', {'colab': colab})
+
+def VerColaboradores(request):
+    colabb = Colaboradores.objects.all()
+    return render(request, 'anubis/mostrar.html', context={'colabb':colabb})
+
+def modColaborador(request,id):
+    mod = Colaboradores.objects.get(rut=id)
+
+def delColaborador(request,id):
+    dele = Colaboradores.objects.get(rut=id)
+    dele.delete()
+    return redirect('mostrar')

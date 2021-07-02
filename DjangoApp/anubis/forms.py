@@ -5,12 +5,21 @@ from django.forms.widgets import Widget
 from .models import Colaboradores
 
 
-class ColaboradoresForm(ModelForm):
+class ColaboradoresForm(forms.ModelForm):
 
     class Meta:
         Model = Colaboradores
         fields = ['rut','image','nombreComp','telefono','direccion','email','contrasenia']
 
+        labels={
+            'rut': 'Rut',
+            'image': 'Imagen',
+            'nombreComp': 'Nombre_Completo',
+            'telefono': 'Telefono',
+            'direccion': 'Direccion',
+            'email': 'Email',
+            'contrasenia': 'Contraseña',
+        }
     widgets={
         'rut': forms.TextInput(
             attrs={
