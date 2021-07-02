@@ -5,6 +5,8 @@ from .models import Colaboradores
 
 def formulario(request):
     return render(request, 'formulario.html')
+def actualizar(request):
+    return render (request, 'anubis/actualizar.html')
 
 def form_colaboradores(request):
     if request.method =='POST':
@@ -22,6 +24,16 @@ def VerColaboradores(request):
 
 def modColaborador(request,id):
     mod = Colaboradores.objects.get(rut=id)
+
+    datos ={
+           'form': ColaboradoresForm(instance=mod)
+    }
+    if request.method == 'POST': 
+        modd = ColaboradoresForm(data=request.POST, instance = mod)
+        if modd.is_valid: 
+            modd.save()          
+            return redirect('mostrar') 
+    return render(request, 'anubis/actualizar.html', datos)
 
 def delColaborador(request,id):
     dele = Colaboradores.objects.get(rut=id)

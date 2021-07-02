@@ -8,7 +8,7 @@ from .models import Colaboradores
 class ColaboradoresForm(forms.ModelForm):
 
     class Meta:
-        Model = Colaboradores
+        model = Colaboradores
         fields = ['rut','image','nombreComp','telefono','direccion','email','contrasenia']
 
         labels={
@@ -20,6 +20,7 @@ class ColaboradoresForm(forms.ModelForm):
             'email': 'Email',
             'contrasenia': 'Contraseña',
         }
+        
     widgets={
         'rut': forms.TextInput(
             attrs={
