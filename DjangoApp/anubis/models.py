@@ -9,5 +9,6 @@ class Colaboradores(models.Model):
     direccion =  models.CharField(max_length=30, verbose_name='Direccion')
     email = models.CharField(max_length=30, verbose_name='Email')
     contrasenia = models.CharField(max_length=30, verbose_name='Contraseña')
+    pais = models.CharField(max_length=15, verbose_name='Pais')
     def __str__(self):
         return(self.nombreComp)

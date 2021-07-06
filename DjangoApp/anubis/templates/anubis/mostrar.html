@@ -5,8 +5,8 @@
   {%load static%}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link href="{% static 'extension/css/style.css'%}" type="text/css" rel="stylesheet"> 
-  <link href="{%static 'extension/css/bootstrap.min.css'%}" type="text/css" rel="stylesheet"> 
+  <link href="{% static 'anubis/css/style.css'%}" type="text/css" rel="stylesheet"> 
+  <link href="{%static 'anubis/css/bootstrap.min.css'%}" type="text/css" rel="stylesheet"> 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">  </svg>
 
   </svg>
@@ -21,25 +21,19 @@
       </button>
       
       <!-- logo -->
-      <a class="navbar-brand" href="file:///C:/Users/aamac/Documents/PruebaHTML_007/Exp3_Hurtado_Hernandez_Aravena_007D/Productos.html">
-        <img src="{%static 'extension/img/logo.png' %}" width="30" height="30" alt="">
+      <a class="navbar-brand" href="#">
+        <img src="{%static 'anubis/img/logo.png' %}" width="30" height="30" alt="">
       </a>
       
       <!-- enlaces -->
       <div class="collapse navbar-collapse btn-group" id="opciones">   
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="file:///C:/Users/aamac/Documents/PruebaHTML_007/Exp3_Hurtado_Hernandez_Aravena_007D/zapatillas.html#!">Zapatillas</a>
+            <a class="nav-link" href="http://127.0.0.1:8000">Formulario</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="file:///C:/Users/aamac/Documents/PruebaHTML_007/Exp3_Hurtado_Hernandez_Aravena_007D/Ropa.html">Ropa</a>
+            <a class="nav-link" href="http://127.0.0.1:8000/mostrar">Colaboradores</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Accesorios</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="file:///C:/Users/aamac/Documents/PruebaHTML_007/Exp3_Hurtado_Hernandez_Aravena_007D/Registro.html">Registro</a>
-          </li>    
           <label for="dark-mode" class="dark-mode-button">
   
            
@@ -59,6 +53,7 @@
             <th scope="col">Telefono</th>
             <th scope="col">Direccion</th>
             <th scope="col">Email</th>
+            <th scope="col">Pais</th>
             <th scope="col">Editar</th>
         </tr>
     </thead>
@@ -72,17 +67,16 @@
             <td>{{z.telefono}}</td>
             <td>{{z.direccion}}</td>
             <td>{{z.email}}</td>
+            <td>{{z.pais}}</td>
             <td><a href="{% url 'modColaborador' z.rut%}" class="btn btn-primary">Modificar</a></td>
             <td><a href="{% url 'delColaborador' z.rut%}" class="btn btn-danger">Eliminar</a></td>
         </tr>
         {%endfor%}
-
-
     </tbody>
 
 
 </table>
-
+<br><br>
 <!-- Footer -->
 <footer class="bg-dark text-center text-white">
     <div class="container p-4">
@@ -91,27 +85,27 @@
       <section class="mb-4">
   
         <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-facebook-f"><img class="icon" src="{%static 'extension/iconos/facebook.png'%}"></i
+          ><i class="fab fa-facebook-f"><img class="icon" src="{%static 'anubis/iconos/facebook.png'%}"></i
         ></a>
   
         <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-           ><i class="fab fa-twitter"> <img class="icon" src="{%static 'extension/iconos/twitter.png'%}"></i
+           ><i class="fab fa-twitter"> <img class="icon" src="{%static 'anubis/iconos/twitter.png'%}"></i
         ></a>
   
         <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-correo"> <img class="icon" src="{%static 'extension/iconos/correo-electronico.png'%}"></i
+          ><i class="fab fa-correo"> <img class="icon" src="{%static 'anubis/iconos/correo-electronico.png'%}"></i
         ></a>
   
-        <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/mr__cardo/" role="button" target="_blank"
-          ><i class="fab fa-instagram"><img class="icon" src="{%static 'extension/iconos/instagram2.png'%}"></i
+        <a class="btn btn-outline-light btn-floating m-1" href="#" role="button" target="_blank"
+          ><i class="fab fa-instagram"><img class="icon" src="{%static 'anubis/iconos/instagram2.png'%}"></i
         ></a>
   
-        <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/samuel-hurtado-9a3b711a0/" role="button" target="_blank"
-          ><i class="fab fa-linkedin-in"><img class="icon" src="{%static 'extension/iconos/linkedin.png'%}"></i
+        <a class="btn btn-outline-light btn-floating m-1" href="#" role="button" target="_blank"
+          ><i class="fab fa-linkedin-in"><img class="icon" src="{%static 'anubis/iconos/linkedin.png'%}"></i
         ></a>
   
-        <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/Lsmuel/Exp1_Hurtado_Hernandez_Aravena_007D" role="button" target="_blank"
-          ><i class="fab fa-github"><img class="icon" src="{%static 'extension/iconos/github.png'%}"></i
+        <a class="btn btn-outline-light btn-floating m-1" href="#" role="button" target="_blank"
+          ><i class="fab fa-github"><img class="icon" src="{%static 'anubis/iconos/github.png'%}"></i
         ></a>
   
       </section>
@@ -143,51 +137,10 @@
         </form>
       </section>
   
-       <a href="file:///C:/Users/aamac/Documents/PruebaHTML_007/Exp3_Hurtado_Hernandez_Aravena_007D/Productos.html"><img src="{%static 'extension/img/LogoNegro.png'%}" class="img-fluid logon center-xs" alt="Responsive image">
-      <a href="https://www.ccs.cl/#" target="_blank"><img class="img-fluid camara" src="{%static 'extension/img/footer-badges.png'%}" alt="Responsive image">
+       <a href="#"><img src="{%static 'anubis/img/LogoNegro.png'%}" class="img-fluid logon center-xs" alt="Responsive image">
+      <a href="https://www.ccs.cl/#" target="_blank"><img class="img-fluid camara" src="{%static 'anubis/img/footer-badges.png'%}" alt="Responsive image">
       </div>
-      <section>
-        <div class="row">
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">INFORMACION</h5>
-            <ul class="list-unstyled mb-0">
-              <li>
-                <a href="file:///C:/Users/aamac/Documents/PruebaHTML_007/Exp3_Hurtado_Hernandez_Aravena_007D/Inicio.html" class="text-white">Quienes Somos</a>
-              </li>
-              <li>
-              <li>
-                <a href="#!" class="text-white">Privacidad Y Seguridad</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Preguntas Frecuentes</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Nuestras Tiendas</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Terminos Y Condiciones</a>
-              </li>
-            </ul>
-          </div>
-            </ul>
-         
-  
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Nombres Creadores</h5>
-            <ul class="list-unstyled mb-0">
-              <li>
-                <p class="text-white">Samuel Hurtado</p>
-              </li>
-              <li>
-                <p class="text-white">Benjamin Aravena</p>
-              </li>
-              <li>
-                <p class="text-white">Geoff Hernandez</p>
-              </li>
-            </div>
-      </section>
-      
-  
+
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
       © 2021 Copyright: Todos Los derechos reservados
     </div>

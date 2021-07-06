@@ -9,7 +9,7 @@ class ColaboradoresForm(forms.ModelForm):
 
     class Meta:
         model = Colaboradores
-        fields = ['rut','image','nombreComp','telefono','direccion','email','contrasenia']
+        fields = ['rut','image','nombreComp','telefono','direccion','email','contrasenia','pais']
 
         labels={
             'rut': 'Rut',
@@ -19,6 +19,7 @@ class ColaboradoresForm(forms.ModelForm):
             'direccion': 'Direccion',
             'email': 'Email',
             'contrasenia': 'Contraseña',
+            'pais': 'Pais',
         }
         
         widgets={

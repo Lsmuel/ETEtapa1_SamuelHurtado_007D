@@ -30,7 +30,7 @@
               <a class="nav-link" href="http://127.0.0.1:8000">Formulario</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="http://127.0.0.1:8000/mostrar">Mostrar</a>
+              <a class="nav-link" href="http://127.0.0.1:8000/mostrar">Colaboradores</a>
             </li>   
             <label for="dark-mode" class="dark-mode-button">
 
@@ -45,7 +45,8 @@
     <div class="row">
     <div class="col-lg-8 mx-auto">
       
-        <form class="form-register" action="#" method="post" onsubmit="return validacion();">
+        <form class="form-register" action="#" method="post">
+          {% csrf_token %}
           <h1 class="page-section-heading text-center text-uppercase text-secondary mb-0">Registro Colaboradores</h1>
           <br><br>
           <div class="control-group">
@@ -90,12 +91,14 @@
           <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
                 {{colab.direccion.label}}
-                  {{colab.direccion}}
+                {{colab.direccion}}
               </div>
           </div>
           <div class="control-group">
             <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                <input class="form-control" name="pais" id="pais" type="text" placeholder="Pais" />
+              {{colab.pais.label}}
+              {{colab.pais}}
+                
             </div>
           </div>
             <br>
@@ -167,41 +170,13 @@
       <a href=""><img src="{% static 'anubis/img/LogoNegro.png' %}" class="img-fluid logon center-xs" alt="Responsive image">
       <a href="https://www.ccs.cl/#" target="_blank"><img class="img-fluid camara" src="{% static 'anubis/img/footer-badges.png' %}" alt="Responsive image">
       </div>
-      <section>
-        <div class="row">
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">INFORMACION</h5>
-            <ul class="list-unstyled mb-0">
-              <li>
-                <a href="" class="text-white">Quienes Somos</a>
-              </li>
-              <li>
-              <li>
-                <a href="#!" class="text-white">Privacidad Y Seguridad</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Preguntas Frecuentes</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Nuestras Tiendas</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Terminos Y Condiciones</a>
-              </li>
-            </ul>
-          </div>
-            </ul>
+
         
-      </section>
-      
-    
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
       © 2021 Copyright: Todos Los derechos reservados
     </div>
     
     </footer>
-
-  <script src="{%static 'anubis/js/java.js'%}"></script>
 </body>
 
 </html>
